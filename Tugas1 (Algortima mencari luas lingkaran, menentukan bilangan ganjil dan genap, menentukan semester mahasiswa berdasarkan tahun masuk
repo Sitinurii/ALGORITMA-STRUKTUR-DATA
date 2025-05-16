@@ -7,11 +7,15 @@ Proses   : 4. Hitung luas= phi x jari-jari x jari-jari
 Output   : 5.Tampilkan luas lingkaran
 
 
+
+
 2. Algoritma menentukan bilangan ganjil dan genap
 
 Inisiasi  :1. Masukkan bilangan angka.
 Proses    :2. Jika bilangan angka dibagi menjadi 2 dan hasilnya 0 maka bilangan angka tersebut genap, jika tidak maka bilangan angka tersebut ganjil.
 Output    :3. Cetak bilangan angka.
+
+
 
 
 3. Algoritma menentukan semester mahasiswa berdasarkan tahun masuk
