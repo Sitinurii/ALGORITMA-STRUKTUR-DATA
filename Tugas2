@@ -1,0 +1,36 @@
+1. Menentukan_ganjil_genap.py 
+
+bilangan = int(input("Masukkan sebuah bilangan: "))
+if bilangan % 2 == 0:
+    print("{bilangan} adalah bilangan genap")
+else:
+    print("{bilangan} adalah bilangan ganjil")
+
+
+2. Menghitung_luas_lingkaran.py
+
+jari_jari = float(input("Masukkan jari-jari lingkaran: "))
+phi = 3.14
+luas = phi * (jari_jari ** 2)
+print(f"Luas lingkaran dengan jari-jari {jari_jari} adalah {luas}")
+
+
+3. Penjumlahan.py
+
+bilangan1 = float(input("Masukkan bilangan pertama: "))
+bilangan2 = float(input("Masukkan bilangan kedua: "))
+hasil = bilangan1 + bilangan2
+print(f"Hasil penjumlahan {bilangan1} + {bilangan2} = {hasil}")
+
+
+
+4. readme.txt
+
+1. Flowchart mendeteksi bilangan ganjil dan genap :
+https://drive.google.com/file/d/1M6aAHg_fxKjZr2JTMpegRhfe4WWhLujM/view?usp=drive_link
+2. Flowchart menghitung luas lingkaran :
+https://drive.google.com/file/d/1YCZIgtmcjC69roMy97FhGhcmGnQrtkpA/view?usp=drive_link
+3. Flowchart menjumlahkan dua buah bilangan :
+https://drive.google.com/file/d/1wrbCzU3AKpzg8LDenhdxFl6bma85t1gd/view?usp=drive_link
+
+
