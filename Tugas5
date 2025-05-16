@@ -1,0 +1,56 @@
+1. Dictionary
+@@ -0,0 +1,10 @@
+my_dist = {
+    "nama"  : "Nuri",
+    "umur"  :  18,
+    "asal"  :  "Lombok"
+}   
+print(my_dist["nama"])
+print(my_dist["umur"])
+print( my_dist["asal"])
+
+print(my_dist)  
+
+
+
+
+2. IF ELSE CODE
+umur = 15
+if umur >= 17: print("Anda sudah cukup umur untuk mengendarai mobil.")
+else:
+    print("Anda belum cukup umur untuk mengendarai mobil.")
+
+
+
+
+3. WHILE CODE
+angka = 1000
+fibl , fib2 = 3, 1
+fibonacci = 3
+
+while fibonacci <= angka :
+    fibonacci = fibl + fib2
+    fibl , fib2 = fib2 , fibonacci
+print ( f" Bilangan Fibonacci pertama yang lebih besar dari { angka } adalah { fibonacci } " )
+
+
+
+
+4. List
+my_list = [1,2,3,4,1,2]
+panjang_my_list = len(my_list)
+print("my_list: ",panjang_my_list)
+print("panjang list : ", my_list)
+print("panggil index ke 5: ", my_list[5])
+my_list.append("mantap")
+print("my_list setelah diinput nilai baru: ", my_list)
+
+
+
+
+5. Tuple
+my_tuple = (1, 2, )
+print("elemen_pertama:",my_tuple[0])
+print("elemen_kedua:",my_tuple[1])
+print("semua elemen:",my_tuple)
+
