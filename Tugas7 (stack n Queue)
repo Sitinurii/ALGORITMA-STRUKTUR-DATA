@@ -1,5 +1,4 @@
 1. Stack
-@@ -0,0 +1,53 @@
 undo_stack = []
 redo_stack = []
 
@@ -58,7 +57,6 @@ while True:
 
 
 2. Queue
-@@ -0,0 +1,47 @@
 from collections import deque
 
 antrean = deque()
