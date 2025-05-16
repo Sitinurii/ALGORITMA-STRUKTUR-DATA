@@ -1,6 +1,5 @@
 Linkedlist
 
-@@ -0,0 +1,105 @@
 class Node:
     def __init__(self, data=None, next=None):
         self.data = data
