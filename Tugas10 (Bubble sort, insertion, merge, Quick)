@@ -1,0 +1,150 @@
+1. Bubble sort
+
+Data = [14, 4, 20, 8, 10, 12, 2, 16, 18, 6]
+print("data sebelum di urutkan:", Data)
+Banyak_Data = len(Data)
+for i in range (Banyak_Data - 1):
+    for j in range (Banyak_Data - 1):
+        if Data [j] > Data [j + 1]:
+            temp = Data[j]
+            Data[j] =  Data [j + 1]
+            Data[j + 1] = temp
+print("Data setelah diurutkan:", Data)
+
+
+
+
+2. Insertion
+
+#Input Bilangan dalam List
+data = [5,4,3,1,9,8,10]
+# ok = "y" 
+# while (ok=="y"):
+# 	data.append(input("Masukkan Bilangan: "))
+# 	ok = raw_input("Lanjut? (y/n) : ")
+# print "Bilangan dalam array adalah: ",data
+
+#Insertion Sort
+print (data)
+d = 1
+n=(len(data)-1)
+while(d <= n):
+	print ("d:",d)
+	titip = data[d]
+	c=d
+	
+	while((c>=1) and (data[c-1]>titip)):
+		print ("\tC-->",c,"&",data[c])
+		print ("\t[C-1]-->",c-1,"&",data[c-1])
+		print ("\ttitip:",titip)
+		data[c]=data[c-1]
+		c = c-1
+
+	data[c]=titip
+	print ("D-->",d,"&",data[d])
+	d = d+1
+
+print ("Bilangan setelah diurutkan dengan Insertion Sort adalah: ",data)
+
+
+
+
+
+3. Merge
+
+# Data awal
+data = [5, 3, 6, 1, 8, 7, 2, 4]
+print("Array sebelum diurutkan:", data)
+
+# Proses merge sort
+if len(data) > 1:
+    # Membagi array menjadi dua bagian
+    mid = len(data) // 2
+    left_half = data[:mid]
+    right_half = data[mid:]
+
+    # Sort bagian kiri
+    if len(left_half) > 1:
+        mid_left = len(left_half) // 2
+        left_left = left_half[:mid_left]
+        left_right = left_half[mid_left:]
+
+        # Mengurutkan bagian kiri
+        left_left.sort()
+        left_right.sort()
+
+        # Menggabungkan bagian kiri
+        sorted_left = []
+        i = j = 0
+        while i < len(left_left) and j < len(left_right):
+            if left_left[i] < left_right[j]:
+                sorted_left.append(left_left[i])
+                i += 1
+            else:
+                sorted_left.append(left_right[j])
+                j += 1
+        sorted_left.extend(left_left[i:])
+        sorted_left.extend(left_right[j:])
+        left_half = sorted_left
+
+    # Sort bagian kanan
+    if len(right_half) > 1:
+        mid_right = len(right_half) // 2
+        right_left = right_half[:mid_right]
+        right_right = right_half[mid_right:]
+
+        # Mengurutkan bagian kanan
+        right_left.sort()
+        right_right.sort()
+
+        # Menggabungkan bagian kanan
+        sorted_right = []
+        i = j = 0
+        while i < len(right_left) and j < len(right_right):
+            if right_left[i] < right_right[j]:
+                sorted_right.append(right_left[i])
+                i += 1
+            else:
+                sorted_right.append(right_right[j])
+                j += 1
+        sorted_right.extend(right_left[i:])
+        sorted_right.extend(right_right[j:])
+        right_half = sorted_right
+
+    # Menggabungkan bagian kiri dan kanan
+    result = []
+    i = j = 0
+    while i < len(left_half) and j < len(right_half):
+        if left_half[i] < right_half[j]:
+            result.append(left_half[i])
+            i += 1
+        else:
+            result.append(right_half[j])
+            j += 1
+    result.extend(left_half[i:])
+    result.extend(right_half[j:])
+    data = result
+
+print("Array setelah diurutkan:", data)
+
+
+
+
+
+4. Quick
+
+def quick_sort(arr):
+    if len(arr) <= 1:  
+        return arr
+    else:
+        pivot = arr[len(arr) // 2]  
+        less = [x for x in arr if x < pivot]  
+        equal = [x for x in arr if x == pivot]
+        greater = [x for x in arr if x > pivot]
+        return quick_sort(less) + equal + quick_sort(greater)
+
+data = [29, 10, 14, 37, 13]
+sorted_data = quick_sort(data)
+print("Sebelum diurutkan:", data)
+print("Setelah diurutkan:", sorted_data)
+
