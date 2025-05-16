@@ -1,0 +1,87 @@
+1. Faktorial
+@@ -0,0 +1,8 @@
+def faktorial (n):
+    if n==0 or n==1:
+        return 1
+    else:
+        return n*(faktorial(n-1))
+a = int(input("masukkan faktorial: "))
+cari_faktorial = faktorial(a)
+print ("nilai dari ",a,"! adalah ", cari_faktorial)
+
+
+
+
+2. Fungsiku
+def fungsiku (x):
+    return (5*x)-10
+a = int(input("masukkan angka:"))
+hasil_fx =fungsiku(a)
+print("hasil dari fungsi f(x) = (5*x)-10 adalah: ",hasil_fx)
+
+
+
+
+3. Angka terbesar
+def angkaterbesar (angka1,angka2,angka3):
+    if ((angka1 > angka2) and (angka1 > angka3)):
+        return angka1
+    elif ((angka2 > angka1) and (angka2 > angka3)):
+        return angka2
+    else:
+        return angka3
+a = int(float(input("masukkan angka 1: ")))
+b = int(float(input("masukkan angka 2: ")))
+c = int(float(input("masukkan angka 3: ")))
+angka_max = max(a,b,c)
+print ("nilai maksimal dari ",a,",",b,"dan",c,"adalah", angka_max)
+
+
+
+
+4. Luas persegi panjang
+def luaspersegipanjang (panjang, luas):
+    return panjang * luas
+def keliling (panjang,lebar):
+    return 2* (panjang + lebar)
+a = int(input("masukkan panjang: "))
+b = int(input("masukkan lebar: "))
+hasil_luas = luaspersegipanjang (a,b)
+hasil_keliling = keliling(a, b)
+print ("hasil luas adalah:",hasil_luas)
+print ("hasil keliling adalah:",hasil_keliling)
+
+
+
+
+5. Fibonachi
+@@ -0,0 +1,10 @@
+def fibonachi(n):
+    if n<1 :
+     print("error")
+    elif n==1 or n==2:
+        return 1
+    else:
+        return (fibonachi(n-1)) + (fibonachi(n-2)) 
+
+a = int(input("Masukkan nilai yang akan dicari: ")) 
+print("hasil dari nilai yang dicari adalah:", fibonachi(a))
+
+
+
+
+6. Angka terkecil
+def angkaterkecil (angka1,angka2,angka3):
+    if ((angka1 > angka2) and (angka1 > angka3)):
+        return angka1
+    elif ((angka2 > angka1) and (angka2 > angka3)):
+        return angka2
+    else:
+        return angka3
+a = int(float(input("masukkan angka 1: ")))
+b = int(float(input("masukkan angka 2: ")))
+c = int(float(input("masukkan angka 3: ")))
+angka_min = min(a,b,c)
+print ("nilai minimal dari ",a,",",b,"dan",c,"adalah", angka_min)
+
+
