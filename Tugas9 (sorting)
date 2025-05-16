@@ -1,4 +1,4 @@
-@@ -0,0 +1,10 @@
+
 Data = [14, 4, 20, 8, 10, 12, 2, 16, 18, 6]
 print("data sebelum di urutkan:", Data)
 Banyak_Data = len(Data)
