@@ -1,0 +1,108 @@
+1. Stack
+@@ -0,0 +1,53 @@
+undo_stack = []
+redo_stack = []
+
+def tindakan (item):
+    undo_stack.append(item)
+    redo_stack.clear()
+    print ("Item yang dimasukkan =>", item)
+
+def undo():
+    if undo_stack:
+        item = undo_stack.pop()
+        redo_stack.append(item)
+        print ("Undo =>", item)
+    else:
+        print ("Tidak ada tindakan yang bisa dilakukan!")
+
+def redo():
+    if redo_stack:
+        item = redo_stack.pop()
+        undo_stack.append(item)
+        print ("Redo =>", item)
+    else:
+        print ("Tidak ada tindakan yang bisa dilakukan!")
+
+def hasil_stack():
+    print ("Undo Stack =>", undo_stack)
+    print ("Redo Stack =>", redo_stack)  
+
+while True:
+    print ()
+    print ("Uji coba Program Undo dan Redo")
+    print ("==============================")
+    print ("1. Masukan item uji coba")
+    print ("2. Tindakan Undo")
+    print ("3. Tindakan Redo")
+    print ("4. Tampilkan Stack")
+    print ("5. Keluar")
+    
+    pilihan = input("Pilih Tindakan (1-5): ")
+    if pilihan == '1':
+        item = input ("Masukan item uji coba => ")
+        tindakan (item)
+    elif pilihan == '2' :
+        undo ()
+    elif pilihan == '3' :
+        redo ()
+    elif pilihan == '4' :
+        hasil_stack()
+    elif pilihan == '5' :
+        print ("Keluar dari program")
+        break
+    else :
+        print ("Pilihan tidak ada dalam daftar!")
+
+
+
+
+2. Queue
+@@ -0,0 +1,47 @@
+from collections import deque
+
+antrean = deque()
+
+def tambah_pelanggan(nama):
+    antrean.append(nama)
+    print(nama + " telah ditambahkan ke antrean.")
+
+def layani_pelanggan():
+    if antrean:
+        pelanggan = antrean.popleft()
+        print(pelanggan + " sedang dilayani.")
+    else:
+        print("Antrean kosong! Tidak ada pelanggan untuk dilayani.")
+
+def tampilkan_antrean():
+    if antrean:
+        print("Antrean saat ini:")
+        nomor = 1
+        for nama in antrean:
+            print(nomor, ".", nama)
+            nomor += 1
+    else:
+        print("Antrean kosong.")
+
+while True:
+    print("\n=== SIMULASI ANTREAN PELANGGAN ===")
+    print("1. Tambah Pelanggan")
+    print("2. Layani Pelanggan")
+    print("3. Tampilkan Antrean")
+    print("4. Keluar")
+    
+ 
+
+    pilihan = input("Pilih tindakan (1-4): ")
+    if pilihan == '1':
+        nama = input("Masukkan nama pelanggan: ")
+        tambah_pelanggan(nama)
+    elif pilihan == '2':
+        layani_pelanggan()
+    elif pilihan == '3':
+        tampilkan_antrean()
+    elif pilihan == '4':
+        print("Keluar dari program.")
+        break
+    else:
+        print("Pilihan tidak valid. Coba lagi.")
