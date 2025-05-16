@@ -1,5 +1,4 @@
 1. Faktorial
-@@ -0,0 +1,8 @@
 def faktorial (n):
     if n==0 or n==1:
         return 1
@@ -55,7 +54,6 @@ print ("hasil keliling adalah:",hasil_keliling)
 
 
 5. Fibonachi
-@@ -0,0 +1,10 @@
 def fibonachi(n):
     if n<1 :
      print("error")
